@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlow.Poc", "SpecFlow.Poc\SpecFlow.Poc.csproj", "{27F66C99-7A82-4559-BCB2-B583C164FFFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27F66C99-7A82-4559-BCB2-B583C164FFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F66C99-7A82-4559-BCB2-B583C164FFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F66C99-7A82-4559-BCB2-B583C164FFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F66C99-7A82-4559-BCB2-B583C164FFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

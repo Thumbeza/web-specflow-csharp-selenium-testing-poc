@@ -9,16 +9,12 @@ namespace SpecFlow.Poc.Steps;
 public sealed class LoginStepDefinitions
 {
     private readonly LoginPage _loginPage;
-    //private readonly LandingPage _landingPage;
     
     //to bo used to manage test state
     private readonly ScenarioContext _scenarioContext;
     
     public LoginStepDefinitions(ScenarioContext scenarioContext)
     {
-        //var driver = BrowserFactory.GetDriver(Browser.Edge);
-        //driver.Manage().Window.Maximize();
-        
         _loginPage = new LoginPage(TestInitialise.Driver);
 
         _scenarioContext = scenarioContext;

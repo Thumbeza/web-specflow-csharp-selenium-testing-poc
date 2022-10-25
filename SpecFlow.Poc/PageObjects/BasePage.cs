@@ -9,7 +9,7 @@ public class BasePage
     
     private const int _defaultWait = 10;
 
-    public BasePage(IWebDriver? driver)
+    protected BasePage(IWebDriver? driver)
     {
         _driver = driver;
     }

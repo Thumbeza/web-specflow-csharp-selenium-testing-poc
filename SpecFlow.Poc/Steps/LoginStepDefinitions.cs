@@ -9,7 +9,7 @@ namespace SpecFlow.Poc.Steps;
 public sealed class LoginStepDefinitions
 {
     private readonly LoginPage _loginPage;
-    private readonly LandingPage _landingPage;
+    //private readonly LandingPage _landingPage;
     
     //to bo used to manage test state
     private readonly ScenarioContext _scenarioContext;
@@ -20,8 +20,7 @@ public sealed class LoginStepDefinitions
         //driver.Manage().Window.Maximize();
         
         _loginPage = new LoginPage(TestInitialise.Driver);
-        _landingPage = new LandingPage(TestInitialise.Driver);
-        
+
         _scenarioContext = scenarioContext;
     }
 
@@ -47,12 +46,6 @@ public sealed class LoginStepDefinitions
     public void WhenAttemptingToLogIn()
     {
         _loginPage.Login();
-    }
-
-    [Then(@"the landing page must be visible")]
-    public void ThenTheLandingPageMustBeVisible()
-    {
-        _landingPage.Visible.Should().BeTrue();
     }
 
     [Then(@"the error message must contain ""(.*)""")]

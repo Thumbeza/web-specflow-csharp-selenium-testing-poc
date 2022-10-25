@@ -7,7 +7,7 @@ namespace SpecFlow.Poc.Driver;
 
 public static class BrowserFactory
 {
-    public static IWebDriver GetDriver(Browser browser)
+    public static IWebDriver? GetDriver(Browser browser)
     {
         return browser switch
         {
@@ -17,14 +17,14 @@ public static class BrowserFactory
         };
     }
 
-    private static IWebDriver GetChrome()
+    private static IWebDriver? GetChrome()
     {
         new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
 
         return new ChromeDriver();
     }
 
-    private static IWebDriver GetEdge()
+    private static IWebDriver? GetEdge()
     {
         new WebDriverManager.DriverManager().SetUpDriver(new EdgeConfig());
 

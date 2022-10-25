@@ -5,11 +5,11 @@ namespace SpecFlow.Poc.PageObjects;
 
 public class BasePage
 {
-    private readonly IWebDriver _driver;
+    private readonly IWebDriver? _driver;
     
     private const int _defaultWait = 10;
 
-    public BasePage(IWebDriver driver)
+    public BasePage(IWebDriver? driver)
     {
         _driver = driver;
     }

@@ -4,9 +4,9 @@ namespace SpecFlow.Poc.PageObjects;
 
 public class LandingPage : BasePage
 {
-    private readonly IWebDriver _driver;
+    private readonly IWebDriver? _driver;
 
-    public LandingPage(IWebDriver driver) : base(driver)
+    public LandingPage(IWebDriver? driver) : base(driver)
     {
         _driver = driver;
 

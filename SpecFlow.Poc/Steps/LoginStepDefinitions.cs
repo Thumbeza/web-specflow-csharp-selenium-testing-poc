@@ -1,23 +1,28 @@
 ﻿using FluentAssertions;
-using SpecFlow.Poc.Driver;
+using SpecFlow.Poc.Hooks;
 using SpecFlow.Poc.PageObjects;
 using TechTalk.SpecFlow;
 
 namespace SpecFlow.Poc.Steps;
 
 [Binding]
-public class LoginStepDefinitions
+public sealed class LoginStepDefinitions
 {
     private readonly LoginPage _loginPage;
     private readonly LandingPage _landingPage;
     
-    public LoginStepDefinitions()
+    //to bo used to manage test state
+    private readonly ScenarioContext _scenarioContext;
+    
+    public LoginStepDefinitions(ScenarioContext scenarioContext)
     {
-        var driver = BrowserFactory.GetDriver(Browser.Chrome);
-        driver.Manage().Window.Maximize();
+        //var driver = BrowserFactory.GetDriver(Browser.Edge);
+        //driver.Manage().Window.Maximize();
         
-        _loginPage = new LoginPage(driver);
-        _landingPage = new LandingPage(driver);
+        _loginPage = new LoginPage(TestInitialise.Driver);
+        _landingPage = new LandingPage(TestInitialise.Driver);
+        
+        _scenarioContext = scenarioContext;
     }
 
     [Given(@"swag labs website is launched")]

@@ -2,11 +2,11 @@
 
 namespace SpecFlow.Poc.Driver;
 
-public class BrowserHelpers
+public class ScreenRecorder : IScreenRecorder
 {
     private readonly IWebDriver _driver;
 
-    public BrowserHelpers(IWebDriver driver)
+    public ScreenRecorder(IWebDriver driver)
     {
         _driver = driver;
     }
@@ -16,5 +16,11 @@ public class BrowserHelpers
         var screenshot = (ITakesScreenshot)_driver;
 
         screenshot.GetScreenshot().SaveAsFile(filePath, ScreenshotImageFormat.Png);
+    }
+
+    //For your fun, implement this function if you want to attach your screenshot to a file
+    public string TakeScreenshotAsBase64()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,4 +1,4 @@
-name: Test Run by ${{ github.actor }}
+name: SpecFlow Test Run
 on:
   push:
 

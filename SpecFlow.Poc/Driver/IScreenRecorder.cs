@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SpecFlow.Poc.Driver;
 
-namespace SpecFlow.Poc.Driver
+public interface IScreenRecorder
 {
-    internal interface IBrowserFactory
-    {
-    }
+    void TakeScreenshot(string filePath);
+    string TakeScreenshotAsBase64();
 }
